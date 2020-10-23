@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script async src="main.js"></script>
+  </head>
+  <body>
+    <div class="mycalc">
+      <div id="battery">100%</div>
+
+      <form name="calculator" id="calculator">
+        <input type="text" name="inputwindow" id="inputwindow" />
+        <div id="banner">Encendido</div>
+
+        <div>
+          <input
+            type="button"
+            id="one"
+            value="1"
+            onclick="takeValue(this.value)"
+          />
+          <input
+            type="button"
+            id="two"
+            value="2"
+            onclick="takeValue(this.value)"
+          />
+          <input
+            type="button"
+            id="three"
+            value="3"
+            onclick="takeValue(this.value)"
+          />
+          <input
+            type="button"
+            id="plus"
+            value="+"
+            onclick="takeValue(this.value)"
+          />
+        </div>
+
+        <div>
+          <input
+            type="button"
+            id="four"
+            value="4"
+            onclick="takeValue(this.value)"
+          />
+          <input
+            type="button"
+            id="five"
+            value="5"
+            onclick="takeValue(this.value)"
+          />
+          <input
+            type="button"
+            id="six"
+            value="6"
+            onclick="takeValue(this.value)"
+          />
+          <input
+            type="button"
+            id="minus"
+            value="-"
+            onclick="takeValue(this.value)"
+          />
+        </div>
+        <div>
+          <input
+            type="button"
+            id="seven"
+            value="7"
+            onclick="takeValue(this.value)"
+          />
+          <input
+            type="button"
+            id="eight"
+            value="8"
+            onclick="takeValue(this.value)"
+          />
+          <input
+            type="button"
+            id="nine"
+            value="9"
+            onclick="takeValue(this.value)"
+          />
+          <input
+            type="button"
+            id="by"
+            value="*"
+            onclick="takeValue(this.value)"
+          />
+        </div>
+        <div>
+          <input
+            type="button"
+            id="zero"
+            value="0"
+            onclick="takeValue(this.value)"
+          />
+          <input
+            type="button"
+            id="decimal"
+            value="."
+            onclick="takeValue(this.value)"
+          />
+          <input
+            type="button"
+            id="devide"
+            value="/"
+            onclick="takeValue(this.value)"
+          />
+          <input
+            type="button"
+            id="percent"
+            value="%"
+            onclick="takeValue(this.value)"
+          />
+        </div>
+        <div>
+          <img
+            alt="error"
+            src="data:image/png;base64,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"
+            id="moverizquierda"
+          />
+          <img
+            alt="error"
+            src="data:image/png;base64,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"
+            id="moverderecha"
+          />
+          <input
+            id="raiz"
+            type="button"
+            value="√"
+            onclick="takeValue(this.value)"
+          />
+          <input
+            id="potencia"
+            type="button"
+            value="^"
+            onclick="takeValue('**')"
+          />
+        </div>
+        <div>
+          <button type="button" value="2.71828" onclick="takeValue(this.value)">
+            e
+          </button>
+
+          <button type="button" value="3.14159" onclick="takeValue(this.value)">
+            π
+          </button>
+
+          <input type="button" value="(" onclick="takeValue(this.value)" />
+
+          <input type="button" value=")" onclick="takeValue(this.value)" />
+        </div>
+        <div class="results">
+          <input
+            type="button"
+            id="equal"
+            value="="
+            onclick="calculateResult()"
+          />
+          <button type="button" id="clear" value="" onclick="clearInput()">
+            Clear
+          </button>
+          <img
+            alt="error"
+            src="https://w7.pngwing.com/pngs/755/752/png-transparent-computer-icons-button-back-angle-triangle-arrow-keys.png"
+            id="borrar"
+          />
+
+          <img
+            alt="error"
+            src="data:image/png;base64,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"
+            id="shift"
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
